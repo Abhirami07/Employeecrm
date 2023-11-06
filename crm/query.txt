@@ -1,0 +1,77 @@
+from django.db import models
+
+class Employees(models.Model):
+    name=models.CharField(max_length=200)
+    department=models.CharField(max_length=200)
+    salary=models.PositiveIntegerField()
+    email=models.EmailField(unique=True)
+    age=models.PositiveIntegerField()
+    contact=models.CharField(max_length=200,null=True)
+
+
+crm query for creating new object
+
+Employees.objects.create(name="manu",department="hr",salary=12000,email="manu12@gmail.com",age=24,contact="test")
+
+-->orm query for fetching all record
+
+>>>qs=Employees.objects.all()
+>>>qs
+
+-->orm query for fetching a specific Employee details
+
+>>>qs=Employees.objects.get(id=1)
+
+orm query for filtering Employee recors
+
+orm query for update an Employee details 
+>>__gte  >=
+>>__lte  <=
+
+hr allathath
+Employees.objects.
+
+
+salary greater than ===salary__gte=500000
+>qs=Employee.objects
+LTE
+
+orm query for excluding 
+
+>qs=Employees.objects.excluding(department="hr")
+
+update
+
+Employees.objects.filter(id=2).update(contact="newcontact",age=32)
+
+delete
+
+Employees.objects.filter(id=1).delete()
+
+assenting order
+
+>>>qs=Employees.objects.all().order_by("salary")
+
+decenting order
+
+>>>qs=Employees.objects.all().order_by("-salary")
+
+*create
+*list
+*details
+*edit
+*delete
+
+
+
+
+
+
+
+
+
+key:value
+
+
+no such table---migrate cheyyathappo
+templete not exist---templete nte name maaripoyittundavum
